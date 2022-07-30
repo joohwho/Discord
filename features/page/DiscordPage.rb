@@ -1,6 +1,6 @@
 class Discord < SitePrism::Page
     def discord_send_embed(mensagem)
-        webHookUrl = 'A URL DO SEU WEBHOOKS AQUI'.freeze
+        webHookUrl = 'SUA URL WEBHOOK AQUI'.freeze
 
         client = Discordrb::Webhooks::Client.new(url: webHookUrl)
         client.execute do |builder|
@@ -9,8 +9,8 @@ class Discord < SitePrism::Page
 
             builder.add_embed do |embed|
                 embed.color = 5039556
-                embed.title = 'Embed title'
-                embed.description = 'Embed description'
+                embed.title = "Funcionalidade: #{$feature}"
+                embed.description = "Cenário: #{$scenario}"
                 embed.timestamp = Time.now
             end
         end        
