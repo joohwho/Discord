@@ -1,4 +1,4 @@
-class Discord < SitePrism::Page
+module Discord
     def discord_send_embed(mensagem)
         webHookUrl = 'SUA URL WEBHOOK AQUI'.freeze
 
